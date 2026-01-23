@@ -15,7 +15,7 @@ const getSingleProduct = (req, res) => {
 };
 
 app.get("/", getAllProducts);
-app.get("/api/v1/product", getSingleProduct);
+app.route("/api/v1/product").get(getSingleProduct);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
