@@ -1,12 +1,11 @@
 import app from "./app.js";
 import dotenv from "dotenv";
-// const PORT = process.env.PORT || 5000;
-
+import { connectMongoDB } from "./config/db.js";
 dotenv.config({ path: "backend/config/config.env" });
 
+connectMongoDB();
+
 const PORT = process.env.PORT || 5000;
-
-
 
 // It is copied to show how controller functions were used earlier directly in app.js file
 // The functions are now moved to controller/productController.js and imported in routes/productRoutes.js file
