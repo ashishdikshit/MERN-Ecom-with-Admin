@@ -26,20 +26,18 @@ export const getAllProducts = async (req, res) => {
 // Update product
 
 export const updateProduct = async (req, res) => {
-  console.log(req.params.id);
   try {
-    let product = await Product.findById(req.params.id);
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+      new: true, // Return the updated product document insted of the original document
+      runValidators: true, // Run schema validators on the update operation
+      // useFindAndModify: false, // Use native findOneAndUpdate() instead of findAndModify()
+    });
     if (!product) {
       return res.status(500).json({
         success: false,
         message: "Product not found",
       });
     }
-    product = await Product.findByIdAndUpdate(req.params.id, req.body, {
-      new: true, // Return the updated product document insted of the original document
-      runValidators: true, // Run schema validators on the update operation
-      // useFindAndModify: false, // Use native findOneAndUpdate() instead of findAndModify()
-    });
     res.status(200).json({ success: true, message: "Update product", product });
   } catch (error) {
     res.status(400).json({
@@ -53,14 +51,13 @@ export const updateProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   try {
-    let product = await Product.findById(req.params.id);
+    const product = await Product.findByIdAndDelete(req.params.id);
     if (!product) {
       return res.status(500).json({
         success: false,
         message: "Product not found",
       });
     }
-    product = await Product.findByIdAndDelete(req.params.id);
     res
       .status(200)
       .json({ success: true, message: "Product deleted successfully" });
@@ -72,6 +69,26 @@ export const deleteProduct = async (req, res) => {
   }
 };
 
-export const getSingleProduct = (req, res) => {
-  res.status(200).json({ message: "Single product" });
+// Accessing single product details
+
+export const getSingleProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) {
+      return res.status(500).json({
+        success: false,
+        message: "Product not found",
+      });
+    }
+    res.status(200).json({
+      success: true,
+      message: "Single product",
+      product, // Return the single product details
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
 };

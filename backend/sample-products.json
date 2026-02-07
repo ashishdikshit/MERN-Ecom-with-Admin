@@ -1,0 +1,252 @@
+[
+  {
+    "name": "Premium 4K Webcam",
+    "description": "Ultra HD 4K resolution webcam with auto-focus and built-in microphone, perfect for streaming and video conferencing",
+    "price": 89.99,
+    "ratings": 4.8,
+    "image": [
+      {
+        "public_id": "product_001_image_1",
+        "url": "https://example.com/images/webcam_1.jpg"
+      },
+      {
+        "public_id": "product_001_image_2",
+        "url": "https://example.com/images/webcam_2.jpg"
+      },
+      {
+        "public_id": "product_001_image_3",
+        "url": "https://example.com/images/webcam_3.jpg"
+      }
+    ],
+    "category": "Computer Accessories",
+    "stock": 75,
+    "numOfReviews": 32,
+    "reviews": [
+      {
+        "user": "507f1f77bcf86cd799439021",
+        "name": "Mike Johnson",
+        "rating": 5,
+        "comment": "Crystal clear picture quality! Perfect for my streaming setup."
+      },
+      {
+        "user": "507f1f77bcf86cd799439022",
+        "name": "Sarah Williams",
+        "rating": 5,
+        "comment": "Great value for money. Works seamlessly with all platforms."
+      },
+      {
+        "user": "507f1f77bcf86cd799439023",
+        "name": "Tom Brown",
+        "rating": 4,
+        "comment": "Good product but driver installation took some time."
+      }
+    ],
+    "createdAt": "2026-01-24T08:45:00Z"
+  },
+  {
+    "name": "Mechanical Gaming Keyboard RGB",
+    "description": "Professional mechanical gaming keyboard with customizable RGB lighting, Cherry MX switches, and programmable keys for ultimate gaming performance",
+    "price": 149.99,
+    "ratings": 4.9,
+    "image": [
+      {
+        "public_id": "product_002_image_1",
+        "url": "https://example.com/images/keyboard_1.jpg"
+      },
+      {
+        "public_id": "product_002_image_2",
+        "url": "https://example.com/images/keyboard_2.jpg"
+      },
+      {
+        "public_id": "product_002_image_3",
+        "url": "https://example.com/images/keyboard_3.jpg"
+      }
+    ],
+    "category": "Gaming Peripherals",
+    "stock": 120,
+    "numOfReviews": 48,
+    "reviews": [
+      {
+        "user": "507f1f77bcf86cd799439024",
+        "name": "John Smith",
+        "rating": 5,
+        "comment": "Best gaming keyboard I've ever owned. The RGB customization is stunning!"
+      },
+      {
+        "user": "507f1f77bcf86cd799439025",
+        "name": "Emma Davis",
+        "rating": 5,
+        "comment": "Extremely responsive. Great for both gaming and typing."
+      },
+      {
+        "user": "507f1f77bcf86cd799439026",
+        "name": "Alex Chen",
+        "rating": 4,
+        "comment": "Excellent quality but requires learning the macro system."
+      },
+      {
+        "user": "507f1f77bcf86cd799439027",
+        "name": "Rachel Green",
+        "rating": 5,
+        "comment": "Worth every penny. Highly recommend for competitive gamers."
+      }
+    ],
+    "createdAt": "2026-01-22T10:30:00Z"
+  },
+  {
+    "name": "Wireless Mouse with Charging Dock",
+    "description": "Premium wireless mouse with precision tracking, ergonomic design, and fast-charging dock. Includes 2000 DPI adjustable settings and 8-hour battery life",
+    "price": 59.99,
+    "ratings": 4.7,
+    "image": [
+      {
+        "public_id": "product_003_image_1",
+        "url": "https://example.com/images/mouse_1.jpg"
+      },
+      {
+        "public_id": "product_003_image_2",
+        "url": "https://example.com/images/mouse_2.jpg"
+      },
+      {
+        "public_id": "product_003_image_3",
+        "url": "https://example.com/images/mouse_3.jpg"
+      }
+    ],
+    "category": "Computer Accessories",
+    "stock": 200,
+    "numOfReviews": 56,
+    "reviews": [
+      {
+        "user": "507f1f77bcf86cd799439028",
+        "name": "David Wilson",
+        "rating": 5,
+        "comment": "Smooth tracking and the charging dock is a game changer!"
+      },
+      {
+        "user": "507f1f77bcf86cd799439029",
+        "name": "Lisa Anderson",
+        "rating": 4,
+        "comment": "Good mouse. Battery life is solid. Dock charging is convenient."
+      },
+      {
+        "user": "507f1f77bcf86cd799439030",
+        "name": "Chris Martinez",
+        "rating": 5,
+        "comment": "Excellent precision for design work. Very satisfied."
+      },
+      {
+        "user": "507f1f77bcf86cd799439031",
+        "name": "Jennifer Lee",
+        "rating": 5,
+        "comment": "Best wireless mouse I've used. Highly comfortable."
+      },
+      {
+        "user": "507f1f77bcf86cd799439032",
+        "name": "Mark Taylor",
+        "rating": 4,
+        "comment": "Great product with minor connectivity issues initially."
+      }
+    ],
+    "createdAt": "2026-01-20T14:15:00Z"
+  },
+  {
+    "name": "Monitor Stand with USB Hub Integration",
+    "description": "Adjustable monitor stand with built-in USB 3.0 hub. Supports up to 32 inch monitors with cable management system and space-saving design",
+    "price": 74.99,
+    "ratings": 4.6,
+    "image": [
+      {
+        "public_id": "product_004_image_1",
+        "url": "https://example.com/images/stand_1.jpg"
+      },
+      {
+        "public_id": "product_004_image_2",
+        "url": "https://example.com/images/stand_2.jpg"
+      },
+      {
+        "public_id": "product_004_image_3",
+        "url": "https://example.com/images/stand_3.jpg"
+      }
+    ],
+    "category": "Office Supplies",
+    "stock": 95,
+    "numOfReviews": 24,
+    "reviews": [
+      {
+        "user": "507f1f77bcf86cd799439033",
+        "name": "Kevin Brown",
+        "rating": 5,
+        "comment": "Built-in USB hub is super convenient. Improved my desk setup significantly."
+      },
+      {
+        "user": "507f1f77bcf86cd799439034",
+        "name": "Michelle Garcia",
+        "rating": 4,
+        "comment": "Sturdy and functional. Cable management could be better."
+      },
+      {
+        "user": "507f1f77bcf86cd799439035",
+        "name": "Robert Jackson",
+        "rating": 5,
+        "comment": "Excellent ergonomic solution. Highly recommended for office work."
+      }
+    ],
+    "createdAt": "2026-01-18T09:20:00Z"
+  },
+  {
+    "name": "Noise-Cancelling USB Headphones",
+    "description": "Professional-grade noise-cancelling headphones with active ANC technology, 30-hour battery life, and superior sound quality for music, calls, and gaming",
+    "price": 199.99,
+    "ratings": 4.85,
+    "image": [
+      {
+        "public_id": "product_005_image_1",
+        "url": "https://example.com/images/headphones_1.jpg"
+      },
+      {
+        "public_id": "product_005_image_2",
+        "url": "https://example.com/images/headphones_2.jpg"
+      },
+      {
+        "public_id": "product_005_image_3",
+        "url": "https://example.com/images/headphones_3.jpg"
+      }
+    ],
+    "category": "Audio Equipment",
+    "stock": 60,
+    "numOfReviews": 41,
+    "reviews": [
+      {
+        "user": "507f1f77bcf86cd799439036",
+        "name": "Patricia White",
+        "rating": 5,
+        "comment": "Outstanding noise cancellation! The sound quality is absolutely premium."
+      },
+      {
+        "user": "507f1f77bcf86cd799439037",
+        "name": "Daniel King",
+        "rating": 5,
+        "comment": "Battery life is incredible. Been using for 3 weeks on one charge!"
+      },
+      {
+        "user": "507f1f77bcf86cd799439038",
+        "name": "Susan Harris",
+        "rating": 4,
+        "comment": "Excellent noise cancellation. Controls take getting used to."
+      },
+      {
+        "user": "507f1f77bcf86cd799439039",
+        "name": "James Martin",
+        "rating": 5,
+        "comment": "Best investment for remote work. Perfect audio for calls and music."
+      },
+      {
+        "user": "507f1f77bcf86cd799439040",
+        "name": "Linda Thompson",
+        "rating": 5,
+        "comment": "Premium quality throughout. Highly satisfied with this purchase."
+      }
+    ],
+    "createdAt": "2026-01-16T16:50:00Z"
+  }
+]
