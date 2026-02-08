@@ -23,6 +23,20 @@ const PORT = process.env.PORT || 5000;
 
 //app.get("/api/v1/product", getSingleProduct);
 // app.route("/api/v1/product").get(getSingleProduct);
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+});
+
+// Handle unhandled promise rejections globally in the application. 
+// This is important to catch any unhandled errors that may occur during asynchronous operations, 
+// such as database queries or API calls. By listening for the "unhandledRejection" event on the process object, 
+// we can log the error message and gracefully shut down the server to prevent it from running in an unstable state. 
+// This helps improve the reliability and stability of the application by ensuring 
+// that unhandled errors are properly handled and do not cause unexpected behavior or crashes.
+process.on("unhandledRejection", (err) => {
+  console.log(`Error: ${err.message}`);
+  console.log("Shutting down the server due to unhandled promise rejection");
+  server.close(() => {
+    process.exit(1);
+  });
 });
