@@ -1,31 +1,33 @@
 import Product from "../models/productModels.js";
 import HandleError from "../utils/handleError.js";
+import handleAsyncError from "../middleware/handleAsyncError.js";
 //  Creating Product Controller Functions
 
-export const createProducts = async (req, res) => {
-  console.log(req.body);
-
+export const createProducts = handleAsyncError(async (req, res, next) => {
   //here Product.create() is a mongoose method to create a new product in the database
   const product = await Product.create(req.body);
   res.status(201).json({
     success: true,
     product, // product is the newly created product document
   });
-};
+});
 
 // Get all the products
-export const getAllProducts = async (req, res) => {
+export const getAllProducts = handleAsyncError(async (req, res, next) => {
   const products = await Product.find(); // Fetch all products from the database
+  if (!product) {
+    return next(new HandleError("Product not found", 404));
+  }
   res.status(200).json({
     message: "All products",
     success: true,
     products, // Return the list of products
   });
-};
+});
 
 // Update product
 
-export const updateProduct = async (req, res, next) => {
+export const updateProduct = handleAsyncError(async (req, res, next) => {
   const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
     new: true, // Return the updated product document insted of the original document
     runValidators: true, // Run schema validators on the update operation
@@ -35,11 +37,11 @@ export const updateProduct = async (req, res, next) => {
     return next(new HandleError("Product not found", 404));
   }
   res.status(200).json({ success: true, message: "Update product", product });
-};
+});
 
 // delete product
 
-export const deleteProduct = async (req, res, next) => {
+export const deleteProduct = handleAsyncError(async (req, res, next) => {
   try {
     const product = await Product.findByIdAndDelete(req.params.id);
     if (!product) {
@@ -54,11 +56,11 @@ export const deleteProduct = async (req, res, next) => {
       message: error.message,
     });
   }
-};
+});
 
 // Accessing single product details
 
-export const getSingleProduct = async (req, res, next) => {
+export const getSingleProduct = handleAsyncError(async (req, res, next) => {
   try {
     const product = await Product.findById(req.params.id);
     if (!product) {
@@ -75,4 +77,4 @@ export const getSingleProduct = async (req, res, next) => {
       message: error.message,
     });
   }
-};
+});
