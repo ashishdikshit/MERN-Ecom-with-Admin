@@ -2,8 +2,16 @@ import app from "./app.js";
 import dotenv from "dotenv";
 import { connectMongoDB } from "./config/db.js";
 dotenv.config({ path: "backend/config/config.env" });
-
 connectMongoDB();
+
+// Handle uncaught exception errors
+process.on("uncaughtException", (err) => {
+  // Log the error message and shut down the server gracefully to prevent it from running in an unstable state.
+
+  console.log(`Error : ${err.message}`);
+  console.log(`Server is shutting down due to uncaught exception errors`);
+  process.exit(1);
+});
 
 const PORT = process.env.PORT || 5000;
 
@@ -27,11 +35,11 @@ const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-// Handle unhandled promise rejections globally in the application. 
-// This is important to catch any unhandled errors that may occur during asynchronous operations, 
-// such as database queries or API calls. By listening for the "unhandledRejection" event on the process object, 
-// we can log the error message and gracefully shut down the server to prevent it from running in an unstable state. 
-// This helps improve the reliability and stability of the application by ensuring 
+// Handle unhandled promise rejections globally in the application.
+// This is important to catch any unhandled errors that may occur during asynchronous operations,
+// such as database queries or API calls. By listening for the "unhandledRejection" event on the process object,
+// we can log the error message and gracefully shut down the server to prevent it from running in an unstable state.
+// This helps improve the reliability and stability of the application by ensuring
 // that unhandled errors are properly handled and do not cause unexpected behavior or crashes.
 process.on("unhandledRejection", (err) => {
   console.log(`Error: ${err.message}`);

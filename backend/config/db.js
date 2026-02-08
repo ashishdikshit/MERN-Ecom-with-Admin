@@ -11,7 +11,4 @@ export const connectMongoDB = () => {
         data.connection.host,
       );
     })
-    .catch((err) => {
-      console.error("Database connection error:", err.message);
-    });
 };
