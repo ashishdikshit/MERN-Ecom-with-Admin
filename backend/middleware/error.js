@@ -1,11 +1,17 @@
-
+import HandleError from "../utils/handleError.js";
 
 export default (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.message = err.message || "Internal Server Error";
 
+  // Cast error occurs when an invalid ID is passed in the request parameters, 
+  // such as when trying to retrieve a resource by its ID from the database.
+  if (err.name === "CastError") {
+    const message = `This is invalid  resource ${err.path}`;
+    err = new HandleError(message, 400);
+  }
   res.status(err.statusCode).json({
-    success: false, 
+    success: false,
     message: err.message,
   });
 };
